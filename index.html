@@ -11,7 +11,6 @@
 </style>
 </head>
 <body>
-	<script src="click.js"></script>
 	
 	<span id="title_name" style="font-size:200%">Фосфорилирование гистонов</span><br><br>
 	
@@ -89,7 +88,7 @@
 			mutation_reps.push(repr);
 			});
 	};
-	<!--console.log(mutation_reps)-->
+	console.log(mutation_reps)
 	window.stage.viewerControls.spin( [ 0, 1, 0 ],110 );
     }); 
 	  
@@ -97,7 +96,19 @@
    for (var i = 0; i < arrayLength; i++) {
         document.write(`<span name="${i}" class="table"><tr><td> ${mutations_names[i]} </td> <td> ${energies[i]} </td></tr></span>`); 
 			}
-      
+	  
+function letter_with_mutation(letter) {
+	alert('Вы нажали на '+letter.innerHTML);
+	var letter_id = Number(letter.id)
+	console.log(letter_id)
+	var table_element = document.getElementsByClassName('table')[letter_id]
+	console.log(table_element)
+	console.log(table_element.innerHTML)
+	table_element.style.background = "yellow"
+	
+	a = document.getElementsByClassName('hyperball')[letter_id]
+	a.setVisibility(true)
+	}
 </script>
 <div id="viewport" style="width:500px; height:500px; border: thin solid black"></div>
 </tbody>	
