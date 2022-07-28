@@ -14,11 +14,9 @@
 	<script src="click.js"></script>
 	
 	<span id="title_name" style="font-size:200%">Фосфорилирование гистонов</span><br><br>
-	<P2>H2A:</p2>
-	<p3>M<span class="letter_with_mutation" id="H2A1ph" onclick="letter_with_mutation(this)">S</span>GRGKQGGKTRAKAKTRSSRAGLQFPVGRVHRLLRKGNYAERVGAGAPV<span class="letter_with_mutation">Y</span>LAAVLEYL<span class="letter_with_mutation">T</span>AEILELAGNAARDNKKTRIIPRHLQLAVRNDEELNKLLGGV<span class="letter_with_mutation">T</span>IAQGGVLPNIQSVLLPKK<span class="letter_with_mutation">T</span>E<span class="letter_with_mutation">S</span>AKSAKSK</p3><br>
 	
 	<p2>H2A:</p2><br>
-	<p3>T R S S R A G L Q F P V G R V H R L L R K G N Y A E R V G A G A P V Y L A A V L E Y L T A E I L E L A G N A A R D N K K T R I I P R</p3><br>
+	<p3><span class="seq" id="0" onclick="letter_with_mutation(this)">T</span> R S S R A G L Q F P V G R V H R L L R K G N Y A E R V G A G A P V Y L A A V L E Y L T A E I L E L A G N A A R D N K K T R I I P R</p3><br>
 	<p3>H L Q L A V R N D E E L N K L L G R V T I A Q G G V L P N I Q S V L L P K</p3><br><br>
 	
 	<br>
@@ -69,13 +67,17 @@
 
         nucl.autoView();
       });
-		
-	window.stage.loadFile("file_all_in_core_Repair.pdb").then(function (nucl) {
-		var repr = nucl.addRepresentation('hyperball', {
-                "sele": "50 and :C", "color": 0xfc03ec, "radius": 10});
-		repr.setVisibility(true);
-	})
-	window.stage.viewerControls.spin( [ 0, 1, 0 ],110 )
+	
+	for(var i=0;i<mutations_names.length;i++) {
+		window.stage.loadFile("file_all_in_core_Repair.pdb").then(function (nucl) {
+			var repr = nucl.addRepresentation('hyperball', {
+                	"sele": "${i} and :C", "color": 0xfc03ec, "radius": 7});
+			repr.setVisibility(false);
+			mutation_reps.push(repr);
+			});
+	};
+
+	window.stage.viewerControls.spin( [ 0, 1, 0 ],110 );
     }); 
 </script>
 <div id="viewport" style="width:500px; height:500px; border: thin solid black"></div>
