@@ -78,19 +78,26 @@
         nucl.autoView();
       });
 	
-	for(var i=0;i<mutations_names.length;i++) {
-		var sele = selections[i]
+	<!-- for(var i=0;i<mutations_names.length;i++) { -->
+		var sele = selections[0]
+		console.log(sele)
 		window.stage.loadFile("file_all_in_core_Repair.pdb").then(function (nucl) {
 			var repr = nucl.addRepresentation('hyperball', {
                 	"color": 0xfc03ec, "radius": 7});
 			repr.setSelection(sele)
 			repr.setVisibility(false);
-			mutation_reps.push(repr);
+			<!-- mutation_reps.push(repr);-->
 			});
-	}; 
+	<!-- }; -->
 	console.log(mutation_reps)
 	window.stage.viewerControls.spin( [ 0, 1, 0 ],110 );
     }); 
+	  
+var arrayLength = energies.length;
+for (var i = 0; i < arrayLength; i++) {
+        document.write(`<tr><td> <input type="hidden" name="${i}" class="table">  </td> <td> ${mutations[i]} </td> <td> ${energies[i]} </td></tr>`); 
+			}
+      
 </script>
 <div id="viewport" style="width:500px; height:500px; border: thin solid black"></div>
 </tbody>	
