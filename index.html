@@ -80,11 +80,12 @@
 	
 	for(var i=0;i<mutations_names.length;i++) {
 		var tuple = resid_and_segids[i]
-		console.log(tuple)
 		window.stage.loadFile("file_all_in_core_Repair.pdb").then(function (nucl) {
 			var repr = nucl.addRepresentation('hyperball', {
                 	"sele": resid_and_segids[i], "color": 0xfc03ec, "radius": 7});
+			console.log(repr.name);
 			repr.name = "${i}";
+			console.log(repr.name);
 			repr.setVisibility(false);
 			mutation_reps.push(repr);
 			});
