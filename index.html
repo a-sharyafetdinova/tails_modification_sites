@@ -78,9 +78,11 @@
       });
 	
 	for(var i=0;i<mutations_names.length;i++) {
+		var tuple = resid_and_segids[i]
 		window.stage.loadFile("file_all_in_core_Repair.pdb").then(function (nucl) {
 			var repr = nucl.addRepresentation('hyperball', {
-                	"sele": $resid_and_segids{i}[0] and :$resid_and_segids"{i}[1], "color": 0xfc03ec, "radius": 7}, name="${i}");
+                	"sele": tuple[0] and :tuple[1], "color": 0xfc03ec, "radius": 7});
+			repr.name = "${i}";
 			repr.setVisibility(false);
 			mutation_reps.push(repr);
 			});
