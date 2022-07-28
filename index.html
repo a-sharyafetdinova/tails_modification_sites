@@ -82,10 +82,7 @@
 		var tuple = resid_and_segids[i]
 		window.stage.loadFile("file_all_in_core_Repair.pdb").then(function (nucl) {
 			var repr = nucl.addRepresentation('hyperball', {
-                	"sele": resid_and_segids[i], "color": 0xfc03ec, "radius": 7});
-			console.log(repr.id);
-			repr.id = $"{i}";
-			console.log(repr.id);
+                	"sele": ${resid_and_segids[i]}, "color": 0xfc03ec, "radius": 7});
 			repr.setVisibility(false);
 			mutation_reps.push(repr);
 			});
