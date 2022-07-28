@@ -84,7 +84,7 @@
 			var repr = nucl.addRepresentation('hyperball', {
                 	"sele": resid_and_segids[i], "color": 0xfc03ec, "radius": 7});
 			console.log(repr.name);
-			repr.name = "${i}";
+			repr.setAttribute("name","${i}");
 			console.log(repr.name);
 			repr.setVisibility(false);
 			mutation_reps.push(repr);
