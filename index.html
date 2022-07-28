@@ -80,7 +80,7 @@
 	
 	for(var i=0;i<mutations_names.length;i++) {
 		var sele = selections[i]
-		console.log(sele)
+		<!--console.log(sele)-->
 		window.stage.loadFile("file_all_in_core_Repair.pdb").then(function (nucl) {
 			var repr = nucl.addRepresentation('hyperball', {
                 	"color": 0xfc03ec, "radius": 7});
@@ -89,7 +89,7 @@
 			mutation_reps.push(repr);
 			});
 	};
-	console.log(mutation_reps)
+	<!--console.log(mutation_reps)-->
 	window.stage.viewerControls.spin( [ 0, 1, 0 ],110 );
     }); 
 	  
