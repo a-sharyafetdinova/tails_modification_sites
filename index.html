@@ -39,7 +39,7 @@
 
 <table border="solid 1px;" style="font-size:14px;">
 <tr>
-<th> Show </th><th>Mutation </th> <th>Energy, kkal/mol </th>
+<th>Mutation </th> <th>Energy, kkal/mol </th>
 </tr>
 <tbody>
   
@@ -95,7 +95,7 @@
 	  
    var arrayLength = energies.length;
    for (var i = 0; i < arrayLength; i++) {
-        document.write(`<tr><td> <input type="checkbox" name="${i}" class="table">  </td> <td> ${mutations_names[i]} </td> <td> ${energies[i]} </td></tr>`); 
+        document.write(`<span name="${i}" class="table"><tr><td> ${mutations_names[i]} </td> <td> ${energies[i]} </td></tr></span>`); 
 			}
       
 </script>
