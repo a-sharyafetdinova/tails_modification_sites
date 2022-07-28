@@ -72,7 +72,7 @@
 		
 	window.stage.loadFile("file_all_in_core_Repair.pdb").then(function (nucl) {
 		var repr = nucl.addRepresentation('hyperball', {
-                "sele": "res_30", "color": 0xfc03ec});
+                "sele": "50 and :C", "color": 0xfc03ec});
 		repr.setVisibility(true);
 	})
 	window.stage.viewerControls.spin( [ 0, 1, 0 ],110 )
