@@ -111,9 +111,10 @@ function letter_with_mutation(letter) {
 	a = mutation_reps[letter_id]
 	console.log(a)
 	console.log(a.innerHTML)
-	visible_mutations.push(a)
-	for(var n=0; n<visible_mutations.length; n++) {
-		n.setVisibility(true) }
+	a.setVisibility(true)
+	<!-- visible_mutations.push(a) -->
+	<!-- for(var n=0; n<visible_mutations.length; n++) { -->
+	<!-- 	n.setVisibility(true) } -->
 	};
 </script>
 <div id="viewport" style="width:500px; height:500px; border: thin solid black"></div>
