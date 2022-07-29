@@ -100,16 +100,17 @@
 function letter_with_mutation(letter) {
 	alert('Вы нажали на '+letter.innerHTML);
 	var letter_id = Number(letter.id)
-	console.log(letter_id)
 	var table_element = document.getElementsByClassName('table')[letter_id]
-	console.log(table_element)
-	console.log(table_element.innerHTML)
-	table_element.style.backgroundColor = "yellow"
+
+	if(table_element.style.backgroundColor == "white") {
+		table_element.style.backgroundColor = "yellow"}
+	else if(table_element.style.backgroundColor == "yellow") {
+		table_element.style.backgroundColor = "white"}
 	
-	a = document.getElementsByName('hyperball')[letter_id]
+	a = mutation_reps[letter_id]
 	console.log(a)
 	console.log(a.innerHTML)
-	a.innerHTML.setVisibility(true)
+	a.setVisibility(true)
 	}
 </script>
 <div id="viewport" style="width:500px; height:500px; border: thin solid black"></div>
