@@ -78,7 +78,7 @@
         });
 	
 	for(var i=0;i<mutations_names.length;i++) {
-		var sele = selections[i]
+		var sele = ${selections[i]}
 		<!--console.log(sele)-->
 		window.stage.loadFile("file_all_in_core_Repair.pdb").then(function (nucl) {
 			var repr = nucl.addRepresentation('hyperball', {
@@ -110,7 +110,8 @@ function letter_with_mutation(letter) {
 	a = mutation_reps[letter_id]
 	console.log(a)
 	console.log(a.innerHTML)
-	a.setVisibility(true)
+	if(a.setVisibility == false) {a.setVisibility(true)}
+	else {a.setVisibility(false)}
 	}
 </script>
 <div id="viewport" style="width:500px; height:500px; border: thin solid black"></div>
