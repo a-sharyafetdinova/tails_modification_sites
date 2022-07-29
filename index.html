@@ -78,7 +78,7 @@
         });
 	
 	for(var i=0;i<mutations_names.length;i++) {
-		var sele = selections[0]
+		var sele = selections[i]
 		<!--console.log(sele)-->
 		window.stage.loadFile("file_all_in_core_Repair.pdb").then(function (nucl) {
 			var repr = nucl.addRepresentation('hyperball', {
@@ -102,10 +102,10 @@ function letter_with_mutation(letter) {
 	var letter_id = Number(letter.id)
 	var table_element = document.getElementsByClassName('table')[letter_id]
 
-	if(table_element.style.backgroundColor == "white") {
+	if(table_element.style.backgroundColor != "yellow") {
 		table_element.style.backgroundColor = "yellow"}
-	else if(table_element.style.backgroundColor == "yellow") {
-		table_element.style.backgroundColor = "white"}
+	if(table_element.style.backgroundColor == "yellow") {
+		table_element.style.backgroundColor = "fff"}
 	
 	a = mutation_reps[letter_id]
 	console.log(a)
