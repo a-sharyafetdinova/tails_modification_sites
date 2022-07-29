@@ -94,7 +94,7 @@
 	  
    var arrayLength = energies.length;
    for (var i = 0; i < arrayLength; i++) {
-        document.write(`<span name="${i}" class="table"><tr><td> ${mutations_names[i]} </td> <td> ${energies[i]} </td></tr></span>`); 
+        document.write(`<tr name="${i}" class="table"><td> ${mutations_names[i]} </td> <td> ${energies[i]} </td></tr>`); 
 			}
 	  
 function letter_with_mutation(letter) {
@@ -107,7 +107,9 @@ function letter_with_mutation(letter) {
 	table_element.style.backgroundColor = "yellow"
 	
 	a = document.getElementsByName('hyperball')[letter_id]
-	a.setVisibility(true)
+	console.log(a)
+	console.log(a.innerHTML)
+	a.innerHTML.setVisibility(true)
 	}
 </script>
 <div id="viewport" style="width:500px; height:500px; border: thin solid black"></div>
