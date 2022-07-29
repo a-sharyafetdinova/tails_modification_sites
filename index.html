@@ -78,7 +78,7 @@
         });
 	
 	for(var i=0;i<mutations_names.length;i++) {
-		var sele = selections[i]
+		var sele = selections[0]
 		<!--console.log(sele)-->
 		window.stage.loadFile("file_all_in_core_Repair.pdb").then(function (nucl) {
 			var repr = nucl.addRepresentation('hyperball', {
@@ -104,7 +104,7 @@ function letter_with_mutation(letter) {
 	var table_element = document.getElementsByClassName('table')[letter_id]
 	console.log(table_element)
 	console.log(table_element.innerHTML)
-	table_element.style.background = "yellow"
+	table_element.style.backgroundColor = "yellow"
 	
 	a = document.getElementsByName('hyperball')[letter_id]
 	a.setVisibility(true)
