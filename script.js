@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function ()  {
       letter.style.color = "red";
       // letter.loc = feature['loc'];
       
-      letter.highlight_sel = nucl.addRepresentation('hyperball', {'sele':feature['resid'].toString() +":"+ feature['segid'],
+      letter.highlight_sel = nucl.addRepresentation('hyperball', {'sele':feature['resid'].toString() +":"+ feature['segid'] + 'and not _H' ,
                                                                "color":'red',
                                                                "radius":5}) ;           
       letter.highlight_sel.setVisibility(false);
