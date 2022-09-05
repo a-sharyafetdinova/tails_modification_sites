@@ -67,7 +67,7 @@ var colors = {'H2A':'rgb(214, 217, 137)','H2B':'rgb(217, 137, 137)',
 document.addEventListener("DOMContentLoaded", function ()  {
       window.stage = new NGL.Stage("viewport",{ backgroundColor:"#FFFFFF" });
       window.stage.setParameters({cameraType: "orthographic"});
-      window.stage.loadFile("https://files.rcsb.org/download/3LZ0.pdb").then(function (nucl) {
+      window.stage.loadFile("file_all_in_core_Repair.pdb").then(function (nucl) {
         var aspectRatio = 2;
         var radius = 1.5;
 
