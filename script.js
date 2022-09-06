@@ -144,22 +144,31 @@ document.addEventListener("DOMContentLoaded", function ()  {
         let tbody = document.createElement("tbody");
         table.appendChild(thead);
         table.appendChild(tbody);
-   energies_div.appendChild(table);
-        let row_1 = document.createElement('tr');
+        
+        energies_div.appendChild(table);
+        
+        let row_0 = document.createElement('tr');
         let heading_1 = document.createElement('th');
         heading_1.innerHTML = "Mutation";
         let heading_2 = document.createElement('th');
         heading_2.innerHTML = "Energy, kkal/mol";
-        row_1.appendChild(heading_1);
-        row_1.appendChild(heading_2);
-        thead.appendChild(row_1)
+        row_0.appendChild(heading_1);
+        row_0.appendChild(heading_2);
+        thead.appendChild(row_0);
+        
+        for (let n = 0; n < mutations_names.length; n++) {
+          let row = document.createElement('tr');
+          row.id = ${n};
+          let row_mutation = document.createElement('td');
+          row_mutation.innerHTML = mutations_names[n];
+          let row_energy = document.createElement('td');
+          row_mutation.innerHTML = energies[n];
+          row.appendChild(row_mutation)
+          row.appendChild(row_energy)
+          
+          tbody.appendChild(row)
+        }
 
-  //temp = "";
- // for (var i = 0;i < mutations_names.length; i++) {
- //   temp += "<tr><td>" + mutations_names[i] + "<\/td><td>" + energies[i] + "<\/td><tr>";
- // }
- // container1.appendChild(temp);      
-  //energies_div.appendChild(container1);
 
 }); 
 });
