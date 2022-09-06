@@ -152,8 +152,8 @@ document.addEventListener("DOMContentLoaded", function ()  {
         heading_1.innerHTML = "Mutation";
         let heading_2 = document.createElement('th');
         heading_2.innerHTML = "Energy, kkal/mol";
-        row_0 = row_0.appendChild(heading_1);
-        row_0 = row_0.appendChild(heading_2);
+        row_0.appendChild(heading_1,heading_2);
+        //row_0.appendChild(heading_2);
         thead.appendChild(row_0);
         
         for (let n = 0; n < mutations_names.length; n++) {
@@ -163,8 +163,8 @@ document.addEventListener("DOMContentLoaded", function ()  {
           row_mutation.innerHTML = mutations_names[n];
           let row_energy = document.createElement('td');
           row_energy.innerHTML = energies[n];
-          row = row.appendChild(row_mutation)
-          row = row.appendChild(row_energy)
+          row.appendChild(row_mutation,row_energy)
+          //row.appendChild(row_energy)
           
           tbody.appendChild(row)
         }
