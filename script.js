@@ -140,14 +140,14 @@ document.addEventListener("DOMContentLoaded", function ()  {
   var energies = [-47.56, -41.36, -50.37, -40.44, -37.28, -31.36, -19.6, -49.31, -49.38, -50.12, -51.77, -36.7, -42.34, -41.91, -44.84, -50.56, -49.28, -47.5, -44.74, -34.01, -42.93, -34.64, -44.65, -38.26, -45.5, -52.39, -47.68, -49.71, -45.16, -48.7, -36.58, -48.78, -47.47, -36.01, -37.89, -47.03, -53.79, -51.51, -44.38, -52.15, -48.08, -40.4, -45.42, -25.87, -41.62, -41.94, -41.36, -45.87, -35.06, -52.5, -34.23, -39.13, -37.84, -43.99, -35.24, -50.45, -32.22];
   var energies_div = document.getElementById("table");
   energies_div.innerHTML += "<tr><td>" + "Название мутации" + "<\/td><td>" + "Энергия, ккал/моль" + "<\/td><tr>";
-    var container1 = document.createElement("p");
+    var container1 = document.createElement("table");
     //energies_div.appendChild(container1);
   temp = "";
   for (var i = 0;i < mutations_names.length; i++) {
     temp += "<tr><td>" + mutations_names[i] + "<\/td><td>" + energies[i] + "<\/td><tr>";
   }
-  container.appendChild(temp);      
-  energies_div.appendChild(container);
+  container1.appendChild(temp);      
+  energies_div.appendChild(container1);
 
 }); 
 });
