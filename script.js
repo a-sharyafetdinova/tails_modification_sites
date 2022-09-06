@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function ()  {
           let row_mutation = document.createElement('td');
           row_mutation.innerHTML = mutations_names[n];
           let row_energy = document.createElement('td');
-          row_mutation.innerHTML = energies[n];
+          row_energy.innerHTML = energies[n];
           row.appendChild(row_mutation)
           row.appendChild(row_energy)
           
