@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function ()  {
     var container1 = document.createElement("p");
     //energies_div.appendChild(container1);
   temp = "";
-  for (i = 0;i < mutations_names.length; i++) {
+  for (var i = 0;i < mutations_names.length; i++) {
     temp += "<tr><td>" + mutations_names[i] + "<\/td><td>" + energies[i] + "<\/td><tr>";
   }
   container.appendChild(temp);      
