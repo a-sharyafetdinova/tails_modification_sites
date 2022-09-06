@@ -145,6 +145,14 @@ document.addEventListener("DOMContentLoaded", function ()  {
         table.appendChild(thead);
         table.appendChild(tbody);
    energies_div.appendChild(table);
+        let row_1 = document.createElement('tr');
+        let heading_1 = document.createElement('th');
+        heading_1.innerHTML = "Mutation";
+        let heading_2 = document.createElement('th');
+        heading_2.innerHTML = "Energy, kkal/mol";
+        row_1.appendChild(heading_1);
+        row_1.appendChild(heading_2);
+        thead.appendChild(row_1)
 
   //temp = "";
  // for (var i = 0;i < mutations_names.length; i++) {
