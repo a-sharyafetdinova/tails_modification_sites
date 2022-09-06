@@ -163,11 +163,10 @@ document.addEventListener("DOMContentLoaded", function ()  {
           row_mutation.innerHTML = mutations_names[n];
           let row_energy = document.createElement('td');
           row_energy.innerHTML = energies[n];
-          row.appendChild(row_mutation,row_energy)
-          //row.appendChild(row_energy)
+          row.appendChild(row_mutation,row_energy);
+          //row.appendChild(row_energy);
           
-          tbody.appendChild(row)
-        }
+          tbody.appendChild(row)};
 
 }); 
 });
