@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function ()  {
         
         for (let n = 0; n < mutations_names.length; n++) {
           let row = document.createElement('tr');
-          row.id = ${n};
+          row.id = n;
           let row_mutation = document.createElement('td');
           row_mutation.innerHTML = mutations_names[n];
           let row_energy = document.createElement('td');
