@@ -139,15 +139,19 @@ document.addEventListener("DOMContentLoaded", function ()  {
   var mutations_names = ['H2A16ph','H2A18ph','H2A19ph','H2A39ph','H2A50ph','H2A57ph','H2A59ph','H2A76ph','H2A101ph','H2A113ph','H2B29ph','H2B33ph','H2B34ph','H2B37ph','H2B39ph','H2B49ph','H2B52ph','H2B53ph','H2B57ph','H2B61ph','H2B75ph','H2B80ph','H2B84ph','H2B85ph','H2B87ph','H2B88ph','H2B93ph','H2B109ph','H2B112ph','H2B116ph','H2B118ph','H2B119ph','H2B120ph','H341ph','H345ph','H354ph','H357ph','H358ph','H380ph','H386ph','H387ph','H396ph','H399ph','H3107ph','H3118ph','H430ph','H447ph','H451ph','H454ph','H471ph','H472ph','H473ph','H480ph','H482ph','H488ph','H496ph','H498ph'];
   var energies = [-47.56, -41.36, -50.37, -40.44, -37.28, -31.36, -19.6, -49.31, -49.38, -50.12, -51.77, -36.7, -42.34, -41.91, -44.84, -50.56, -49.28, -47.5, -44.74, -34.01, -42.93, -34.64, -44.65, -38.26, -45.5, -52.39, -47.68, -49.71, -45.16, -48.7, -36.58, -48.78, -47.47, -36.01, -37.89, -47.03, -53.79, -51.51, -44.38, -52.15, -48.08, -40.4, -45.42, -25.87, -41.62, -41.94, -41.36, -45.87, -35.06, -52.5, -34.23, -39.13, -37.84, -43.99, -35.24, -50.45, -32.22];
   var energies_div = document.getElementById("table");
-  energies_div.innerHTML += "<tr><td>" + "Название мутации" + "<\/td><td>" + "Энергия, ккал/моль" + "<\/td><tr>";
-    var container1 = document.createElement("table");
-    //energies_div.appendChild(container1);
-  temp = "";
-  for (var i = 0;i < mutations_names.length; i++) {
-    temp += "<tr><td>" + mutations_names[i] + "<\/td><td>" + energies[i] + "<\/td><tr>";
-  }
-  container1.appendChild(temp);      
-  energies_div.appendChild(container1);
+        let table = document.createElement("table");
+        let thead = document.createElement("thead");
+        let tbody = document.createElement("tbody");
+        table.appendChild(thead);
+        table.appendChild(tbody);
+   energies_div.appendChild(table);
+
+  //temp = "";
+ // for (var i = 0;i < mutations_names.length; i++) {
+ //   temp += "<tr><td>" + mutations_names[i] + "<\/td><td>" + energies[i] + "<\/td><tr>";
+ // }
+ // container1.appendChild(temp);      
+  //energies_div.appendChild(container1);
 
 }); 
 });
