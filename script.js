@@ -68,7 +68,7 @@ colors_for_table = {'low_en':'rgb(238, 255, 232)', 'high_en':'rgb(250, 223, 220)
 document.addEventListener("DOMContentLoaded", function ()  {
       window.stage = new NGL.Stage("viewport",{ backgroundColor:"#FFFFFF" });
       window.stage.setParameters({cameraType: "orthographic"});
-      window.stage.loadFile("hfile_all_in_core_Repair.pdb").then(function (nucl) {
+      window.stage.loadFile("file_all_in_core_Repair.pdb").then(function (nucl) {
         var aspectRatio = 2;
         var radius = 1.5;
 
